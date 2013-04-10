@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Development of bigger media site on Drupal 7 - Janez Urevc (@slashrsm)</title>
+  <!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>-->
+  
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+  <link href='http://fonts.googleapis.com/css?family=Londrina+Solid|Averia+Libre:400,700,400italic' rel='stylesheet' type='text/css'>
+  
+  <link rel="stylesheet" href="http://yandex.st/highlightjs/6.1/styles/default.min.css">
+  <script src="http://yandex.st/highlightjs/6.1/highlight.min.js"></script>
+  <script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+  <script type="text/javascript" src="js/jmpress.js/dist/jmpress.js"></script>
+  <script src="js/highcharts/js/highcharts.js"></script>
+  <script src="http://janezurevc.name:8899/socket.io/socket.io.js"></script>
+  <script src="http://janezurevc.name:8899/remote.js"></script>
+</head>
+<body>
+  
+  <div id="jmpress">
+    <div id="start" class="step" data-y="20">
+      <h1>Get your data into Drupal with
+      Feeds<div class="subtitle">#dcaafeeds</div></h1>
+      
+      
+      <div>Janez Urevc</div><div>(@slashrsm)</div>
+      <div>(janez@|http://)janezurevc.name</div>
+    </div>
+    <div id="vsebina" class="step" data-scale="0.2" data-x="-400" data-y="100" data-rotate="68">
+      <h2>About me</h2>
+      <ul>
+	<li>Drupal developer</li>
+	<li>currently working at examiner.com</li>
+	<li>at biggest Slovenian media company in the past</li>
+	<li>from Portorož, Slovenia, EU</li>
+	<li>2011 Google Summer of code student, 2012 mentor</li>
+        <li>@slashrsm at twitter, IRC, drupal.org., ...</li>
+      </ul>
+      <img src="images/map.png" class="map" />
+     </div>
+     <div class="step" data-scale="0.05" data-x="-310" data-y="120" data-rotate="-7">
+      <h2>Feeds</h2>
+      <ul>
+	<li>very powerfull module (framework) for importing 3rd party data into Drupal</li>
+	<li>plugabble, flexible</li>
+	<li>uses abstract workflow that can cover wide set of data formats</li>
+	<li>can import XML, HTML, RSS, CSV, OPML, ... (you name it!)</li>
+	<li>data can be saved as nodes, terms, users, DrupalCommerce
+	products, ...</li>
+      </ul>
+    </div>
+
+    <div class="step" data-scale="0.08" data-x="-250" data-y="145" data-rotate="6">
+      <iframe width="800" height="400" scrolling="no"
+      src="http://drupal.org/project/feeds#page-subtitle"></iframe>
+      <h2><a href="http://drupal.org/project/feeds">http://drupal.org/project/feeds</a></h2>
+    </div>
+
+    <div class="step demo" data-scale="0.05" data-x="-190" data-y="120" data-rotate="-20">
+      <h2>Demo 1:<br />Import users from CSV</h2>
+    </div>
+
+    <div class="step demo" data-scale="0.10" data-x="-105" data-y="125" data-rotate="20">
+      <h2>Demo 2:<br />Import RSS feed</h2>
+    </div>
+
+    <div  id="workflow" class="step no-back" data-scale="0.10" data-x="10" data-y="125" data-rotate="-90">
+      <h2>Feeds: concepts</h2>
+      <ul>
+	<li>4 basic workflow steps: fetcher, parser, processor, mapper</li>
+      </ul>
+
+      <div class="step nested" data-y="450" data-x="-300" data-rotate="0" data-scale="1">
+        <h3>Fetcher</h3>
+      </div>
+      <div class="step nested" data-y="850" data-x="-300" data-rotate="0" data-scale="1">
+        <h3>Parser</h3>
+      </div>
+      <div class="step nested" data-y="1150" data-x="-300" data-rotate="0" data-scale="1">
+        <h3>Processor</h3>
+      </div>
+      <div class="step nested" data-y="1450" data-x="-300" data-rotate="0" data-scale="1">
+        <h3>Mapper</h3>
+      </div>
+    </div>
+
+    <div class="step demo" data-scale="0.10" data-x="200" data-y="125" data-rotate="20">
+      <h2>Demo 3:<br />Weather observations XML import</h2>
+    </div>
+
+     <div class="step" data-scale="0.12" data-x="310" data-y="120" data-rotate="-35">
+      <h2>Helper modules</h2>
+      <ul>
+	<li>Feeds tamper</li>
+	<li>Feeds crawler</li>
+	<li>more: http://drupal.org/node/856644</li>
+      </ul>
+    </div>
+
+     <div class="step" data-scale="0.07" data-x="420" data-y="110" data-rotate="45">
+      <h2>"Example: Google Reader replacement"</h2>
+      <ul>
+	<li>Entirely configured with Feeds & Views</li>
+	<li>Proof of concept</li>
+	<li>//URL//</li>
+      </ul>
+    </div>
+
+     <div class="step" data-scale="0.12" data-x="510" data-y="120" data-rotate="-28">
+      <h2>Resources</h2>
+      <ul>
+	<li>drupal.org/project/feeds - project page</li>
+	<li>drupal.org/node/622696 - docs</li>
+	<li>github.com/slashrsm/feeds_session_examples - demos</li>
+      </ul>
+    </div>
+
+
+
+  </div>
+  <script type="text/javascript">
+    $(function() {
+      $("#jmpress").jmpress({
+        keyboard: {
+          keys: {
+            27: ['select', '#start'],
+            49: ['select', '#vsebina'],
+            50: ['select', '#step-3'],
+            51: ['select', '#step-4'],
+            52: ['select', '#predstavitev'],
+            53: ['select', '#podrobnosti-uvedbe'],
+            54: ['select', '#potek-projekta'],
+            55: ['select', '#ocenjevanje'],
+            56: ['select', '#step-11'],
+            57: ['select', '#step-12'],
+            48: ['select', '#step-13'],
+            36: ['select', '#scrum-graph'],
+            222: ['select', '#step-15'],
+          }
+        },
+        hash : { use: false },
+        mouse: { clickSelects: false }
+      });
+    });
+    //$(document).click(function(handler) {
+    //  if (handler.button === 0) {
+    //    $("#jmpress").jmpress('next');
+    //  }
+    //  if (handler.button === 1) {
+    //    $("#jmpress").jmpress('prev');
+    //  }
+      
+    //});
+  </script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-15020674-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+  
+</body>
+</html>

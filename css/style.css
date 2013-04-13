@@ -34,6 +34,10 @@ small {
   font-size: 0.7em;
 }
 
+li {
+  margin-bottom: 8px;
+}
+
 img.logo {
   -webkit-transform: rotate(30deg);
   -moz-transform:    rotate(30deg);
@@ -131,7 +135,7 @@ img.logo {
 .step#workflow:before {
     background: white;
     width: 1000px;
-    height: 1500px;
+    height: 2000px;
     content: '.';
     display: block;
     z-index: -100;

@@ -6,7 +6,7 @@ body {
 	min-height: 740px;
 	background-color: white;
 	-webkit-font-smoothing: antialiased;
-background: transparent url('../images/drupal.png') scroll no-repeat center center;
+  background: transparent url('../images/drupal.png') scroll no-repeat center center;
 }
 
 h1 {
@@ -38,15 +38,6 @@ li {
   margin-bottom: 8px;
 }
 
-img.logo {
-  -webkit-transform: rotate(30deg);
-  -moz-transform:    rotate(30deg);
-  -ms-transform:     rotate(30deg);
-  -o-transform:      rotate(30deg);
-  transform:         rotate(30deg);
-  float: right;
-}
-
 .step:not(#container) .nested {
   font-size: 1em;
 }
@@ -64,18 +55,17 @@ img.logo {
   color: #222;
   text-shadow: 0 2px 2px rgba(0, 0, 0, .1);
 
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing:    border-box;
-	-ms-box-sizing:     border-box;
-	-o-box-sizing:      border-box;
-	box-sizing:         border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing:    border-box;
+  -ms-box-sizing:     border-box;
+  -o-box-sizing:      border-box;
+  box-sizing:         border-box;
 
-	-webkit-transition: opacity 1s;
-	-moz-transition:    opacity 1s;
-	-ms-transition:     opacity 1s;
-	-o-transition:      opacity 1s;
-	transition:         opacity 1s;
-	
+  -webkit-transition: opacity 1s;
+  -moz-transition:    opacity 1s;
+  -ms-transition:     opacity 1s;
+  -o-transition:      opacity 1s;
+  transition:         opacity 1s;	
 }
 
 /* fade out inactive slides */
@@ -97,42 +87,7 @@ img.logo {
   position: relative;
 }
 
-.step#vsebina {
-  position: relative;
-  padding-right: 350px;	
-}
-
-.step#vsebina img {
-  border-radius: 5%;
-}
-
-.step#vsebina .map {
-  position: absolute;
-  top: 28px;
-  right: 10px; 
-}
-
-.step#vsebina .delo {
-  position: absolute;
-  top: 260px;
-  right: 40px; 
-}
-
-.step#vsebina .soc {
-  position: absolute;
-  top: 385px;
-  right: 170px; 
-}
-
-.step#ocenjevanje img {
-  width: 20%;
-  float: right;
-  border-radius: 5%;
-  box-shadow: 10px 10px 25px #888;
-  -webkit-transform:rotate(30deg);
-}
-
-.step#workflow:before {
+.step#feeds-concepts:before {
     background: white;
     width: 1000px;
     height: 2000px;
@@ -162,98 +117,7 @@ img.logo {
 
 }
 
-.step#ocenjevanje .nested img {
-  width: 100%;
-  float: none;
-  border-radius: 5%;
-  box-shadow: 10px 10px 25px #888;
-  -webkit-transform: none;
-}
-
-
-
-.step#ocenjevanje .nested.white {
-  text-align: left;
-}
-
-
-.step#ocenjevanje .nested.white li  {
-  margin-bottom: 10px;
-}
-
-
-
 body .step:not(#container).demo {
     text-align: center;
     padding-top: 5em;
-}
-.step#potek-projekta img {
-	width: 35%;
-  float: right;
-  border-radius: 7%;
-  box-shadow: 10px 10px 25px #888;
-  -webkit-transform:rotate(30deg);
-  position: relative;
-  bottom: 30px;
-  left: 30px;
-}
-
-.step#workflow {
-    min-height: 0px;
-}
-
-.step#potek-projekta .nested img {
-	width: 100%;
-  float: none;
-  border-radius: 7%;
-  box-shadow: 10px 10px 25px #888;
-  -webkit-transform: none;
-  position: static;
-}
-
-
-.step:not(#container) .step#drupal-example dd {
-  font-size: 0.7em;
-}
-
-.step:not(#container) .step#cache-general-idea {
-  text-align: center;
-}
-
-.step:not(#container) .step pre {
-  font-size: 0.8em;
-}
-
-.step .pros,
-.step .cons {
-  width: 45%;
-  height: 400px;
-  float: left;
-  font-size: 0.7em;
-  padding: 0.5em;
-}
-
-.step .pros {
-  background: rgba(202, 255, 195, 0.3) url(../images/plus.png) center center scroll no-repeat;
-  color: rgba(8, 142, 5, 1);
-}
-
-.step .cons {
-  background: rgba(255, 141, 165, 0.3) url(../images/minus.png) center center scroll no-repeat;
-  color: rgba(142, 5, 34, 1);
-}
-
-.step:not(#container) .step#configuration pre {
-  font-size: 0.6em;
-}
-
-#graph-apache, #graph-varnish, #graph-growth {
-  text-align: center;
-}
-#graph-apache img, #graph-varnish img {
-  margin-top: 100px;	
-}
-
-#graph-growth img {
-  margin-top: 50px;
 }

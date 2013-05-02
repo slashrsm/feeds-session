@@ -2,17 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Development of bigger media site on Drupal 7 - Janez Urevc (@slashrsm)</title>
-  <!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>-->
+  <title>Get your data into Drupal with feeds - Janez Urevc (@slashrsm)</title>
   
   <link href="css/style.css" rel="stylesheet" type="text/css" />
   <link href='http://fonts.googleapis.com/css?family=Londrina+Solid|Averia+Libre:400,700,400italic' rel='stylesheet' type='text/css'>
   
-  <link rel="stylesheet" href="http://yandex.st/highlightjs/6.1/styles/default.min.css">
-  <script src="http://yandex.st/highlightjs/6.1/highlight.min.js"></script>
   <script type="text/javascript" src="js/jquery-1.7.2.js"></script>
-  <script type="text/javascript" src="js/jmpress.js/dist/jmpress.js"></script>
-  <!-- <script src="js/highcharts/js/highcharts.js"></script> -->
+  <script type="text/javascript" src="js/jmpress.custom.js"></script>
   <!-- <script src="http://janezurevc.name:8899/socket.io/socket.io.js"></script> -->
   <!-- <script src="http://janezurevc.name:8899/remote.js"></script> -->
 </head>
@@ -27,7 +23,7 @@
       <div>Janez Urevc</div><div>(@slashrsm)</div>
       <div>(janez@|http://)janezurevc.name</div>
     </div>
-    <div id="vsebina" class="step" data-scale="0.2" data-x="-400" data-y="100" data-rotate="68">
+    <div id="about-me" class="step" data-scale="0.2" data-x="-400" data-y="100" data-rotate="68">
       <h2>About me</h2>
       <ul>
 	<li>Drupal developer</li>
@@ -39,7 +35,7 @@
       </ul>
       <img src="images/map.png" class="map" />
      </div>
-     <div class="step" data-scale="0.05" data-x="-310" data-y="120" data-rotate="-7">
+     <div id="feeds-basics" class="step" data-scale="0.05" data-x="-310" data-y="120" data-rotate="-7">
       <h2>Feeds</h2>
       <ul>
 	<li>very powerfull module (framework) for importing 3rd party data into Drupal</li>
@@ -51,26 +47,26 @@
       </ul>
     </div>
 
-    <div class="step" data-scale="0.08" data-x="-250" data-y="145" data-rotate="6">
+    <div id="feeds-project-page" class="step" data-scale="0.08" data-x="-250" data-y="145" data-rotate="6" data-view-port-max-scale="4" data-view-port-zoomable="10">
       <iframe width="800" height="400" src="http://drupal.org/project/feeds#page-subtitle"></iframe>
       <h2><a href="http://drupal.org/project/feeds">http://drupal.org/project/feeds</a></h2>
     </div>
 
-    <div class="step demo" data-scale="0.05" data-x="-190" data-y="120" data-rotate="-20">
+    <div ide="demo-users" class="step demo" data-scale="0.05" data-x="-190" data-y="120" data-rotate="-20">
       <h2>Demo 1:<br />Import users from CSV</h2>
     </div>
 
-    <div class="step demo" data-scale="0.10" data-x="-105" data-y="125" data-rotate="20">
+    <div id="demo-rss" class="step demo" data-scale="0.10" data-x="-105" data-y="125" data-rotate="20">
       <h2>Demo 2:<br />Import RSS feed</h2>
     </div>
 
-    <div  id="workflow" class="step no-back" data-scale="0.10" data-x="10" data-y="125" data-rotate="-90">
+    <div id="feeds-concepts" class="step no-back" data-scale="0.10" data-x="10" data-y="125" data-rotate="-90">
       <h2>Feeds: concepts</h2>
       <ul>
 	<li>4 basic workflow steps: fetcher, parser, processor, mapper</li>
       </ul>
 
-      <div class="step nested" data-y="450" data-x="0" data-rotate="0" data-scale="1">
+      <div id="feeds-fetcher" class="step nested" data-y="450" data-x="0" data-rotate="0" data-scale="1">
         <h3>Fetcher</h3>
         <ul>
           <li>"downloads" data to your site</li>
@@ -79,7 +75,7 @@
           <li>Custom: Video on demand database</li>
         </ul>
       </div>
-      <div class="step nested" data-y="850" data-x="0" data-rotate="0" data-scale="1">
+      <div id="feeds-parser" class="step nested" data-y="850" data-x="0" data-rotate="0" data-scale="1">
         <h3>Parser</h3>
         <ul>
           <li>transforms raw data into usable form</li>
@@ -89,7 +85,7 @@
           <li>YouTube, Vimeo, Excel, ...</li>
         </ul>
       </div>
-      <div class="step nested" data-y="1250" data-x="0" data-rotate="0" data-scale="1">
+      <div id="feeds-processor" class="step nested" data-y="1250" data-x="0" data-rotate="0" data-scale="1">
         <h3>Processor</h3>
         <ul>
           <li>knows how to save data</li>
@@ -98,7 +94,7 @@
           <li>...</li>
         </ul>
       </div>
-      <div class="step nested" data-y="1650" data-x="0" data-rotate="0" data-scale="1">
+      <div id="feeds-mapper" class="step nested" data-y="1650" data-x="0" data-rotate="0" data-scale="1">
         <h3>Mapper</h3>
         <ul>
           <li>provides link between parsed data and Drupal object</li>
@@ -109,11 +105,11 @@
       </div>
     </div>
 
-    <div class="step demo" data-scale="0.10" data-x="270" data-y="80" data-rotate="20">
+    <div id="demo-weather" class="step demo" data-scale="0.10" data-x="270" data-y="80" data-rotate="20">
       <h2>Demo 3:<br />Weather observations XML import</h2>
     </div>
 
-     <div class="step" data-scale="0.12" data-x="390" data-y="80" data-rotate="-35">
+     <div id="feeds-modules" class="step" data-scale="0.12" data-x="390" data-y="80" data-rotate="-35">
       <h2>Helper modules</h2>
       <ul>
 	<li>Feeds tamper</li>
@@ -122,7 +118,7 @@
       </ul>
     </div>
 
-     <div class="step" data-scale="0.07" data-x="286" data-y="190" data-rotate="45">
+     <div id="google-reader" class="step" data-scale="0.07" data-x="286" data-y="190" data-rotate="45">
       <h2>Example: "Google Reader replacement"</h2>
       <ul>
 	<li>Entirely configured with Feeds & Views</li>
@@ -131,7 +127,7 @@
       </ul>
     </div>
 
-     <div class="step" data-scale="0.12" data-x="410" data-y="210" data-rotate="-28">
+     <div id="resources" class="step" data-scale="0.12" data-x="410" data-y="210" data-rotate="-28">
       <h2>Resources</h2>
       <ul>
 	<li>drupal.org/project/feeds - project page</li>
@@ -145,27 +141,35 @@
   </div>
   <script type="text/javascript">
     $(function() {
-      $("#jmpress").jmpress({
-        keyboard: {
-          keys: {
-            27: ['select', '#start'],
-            49: ['select', '#vsebina'],
-            50: ['select', '#step-3'],
-            51: ['select', '#step-4'],
-            52: ['select', '#predstavitev'],
-            53: ['select', '#podrobnosti-uvedbe'],
-            54: ['select', '#potek-projekta'],
-            55: ['select', '#ocenjevanje'],
-            56: ['select', '#step-11'],
-            57: ['select', '#step-12'],
-            48: ['select', '#step-13'],
-            36: ['select', '#scrum-graph'],
-            222: ['select', '#step-15'],
-          }
+      $("#jmpress").jmpress(
+        'toggle',
+        27,
+        {
+          keyboard: {
+            keys: {
+              //27: ['select', '#start'],
+              49: ['select', '#vsebina'],
+              50: ['select', '#step-3'],
+              51: ['select', '#step-4'],
+              52: ['select', '#predstavitev'],
+              53: ['select', '#podrobnosti-uvedbe'],
+              54: ['select', '#potek-projekta'],
+              55: ['select', '#ocenjevanje'],
+              56: ['select', '#step-11'],
+              57: ['select', '#step-12'],
+              48: ['select', '#step-13'],
+              36: ['select', '#scrum-graph'],
+              222: ['select', '#step-15'],
+            }
+          },
+          viewPort: {
+            width: 1300,
+            maxScale: 1,
+          },
+          <!-- mouse: { clickSelects: false } -->
         },
-        <!-- hash : { use: false }, -->
-        <!-- mouse: { clickSelects: false } -->
-      });
+        true
+      );
     });
     //$(document).click(function(handler) {
     //  if (handler.button === 0) {

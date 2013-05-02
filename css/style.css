@@ -121,3 +121,40 @@ body .step:not(#container).demo {
     text-align: center;
     padding-top: 5em;
 }
+
+
+/* ABOUT */
+.step#about-me {
+  min-height: 600px;
+}
+
+#about-me .map {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+#about-me .examiner {
+  position: absolute;
+  top: 70px;
+  left: 5px;
+}
+
+#about-me .delo {
+  position: absolute;
+  top: 270px;
+  right: 15px;
+}
+
+#about-me .soc-2012 {
+  position: absolute;
+  top: 350px;
+  left: 25px;
+}
+
+#about-me .soc-2013 {
+  position: absolute;
+  top: 350px;
+  right: 350px;
+}
+

@@ -15,13 +15,16 @@
 <body>
   
   <div id="jmpress">
+    <div id="pre-start" class="step" data-y="20"></div>
     <div id="start" class="step" data-y="20">
       <h1>Get your data into Drupal with
       Feeds<div class="subtitle">&nbsp;</div></h1>
       
       
-      <div>Janez Urevc</div><div>(@slashrsm)</div>
+      <div>Janez Urevc (@slashrsm)</div>
       <div>(janez@|http://)janezurevc.name</div>
+      <div>DrupalCon Portland, Site building track</div>
+      <div>May 21st 2013</div>
     </div>
     <div id="about-me" class="step" data-scale="0.2" data-x="-400" data-y="100" data-rotate="68">
       <h2>About @slashrsm</h2>
@@ -48,7 +51,7 @@
       <h2><a href="http://drupal.org/project/feeds">http://drupal.org/project/feeds</a></h2>
     </div>
 
-    <div ide="demo-users" class="step demo" data-scale="0.05" data-x="-190" data-y="120" data-rotate="-20">
+    <div id="demo-users" class="step demo" data-scale="0.05" data-x="-190" data-y="120" data-rotate="-20">
       <h2>Demo 1:<br />Import users from CSV</h2>
     </div>
 
@@ -132,10 +135,11 @@
       </ul>
     </div>
 
-
+    <div id="post-end" class="step" data-y="20"></div>
 
   </div>
   <script type="text/javascript">
+$(document).ready(function() {
     $(function() {
       $("#jmpress").jmpress(
         'toggle',
@@ -167,6 +171,17 @@
         true
       );
     });
+    
+    $('.step').on('enterStep', function(event) {
+      $('body').toggleClass($(this).attr('id') + '-active');
+    })
+    .on('leaveStep', function(event) {
+      $('body').toggleClass($(this).attr('id') + '-active');
+    });
+
+    $('#pre-start, #post-end').height($(window).height());  
+    $('#pre-start, #post-end').width($(window).width());  
+
     //$(document).click(function(handler) {
     //  if (handler.button === 0) {
     //    $("#jmpress").jmpress('next');
@@ -176,6 +191,7 @@
     //  }
       
     //});
+});
   </script>
 
 <script type="text/javascript">

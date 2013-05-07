@@ -11,7 +11,7 @@ body {
 
 h1 {
   font-size: 2.5em;
-  margin-bottom: 1.5em;
+  margin-bottom: 2.5em;
 }
 
 h1 .subtitle {
@@ -73,6 +73,31 @@ li {
 	opacity: 0.5;
 }
 
+#pre-start, #post-end {
+  background: white url(../images/portland-front.png) scroll top center no-repeat;
+  background-size: contain;
+  opacity: 0;
+  border-radius: 0;
+  box-shadow:none;
+}
+
+#post-end {
+  background-image: url(../images/portland-back.png);
+}
+
+#pre-start.active, #post-end.active {
+  opacity: 1;
+  -webkit-transition: opacity 1s;
+  -moz-transition:    opacity 1s;
+  -ms-transition:     opacity 1s;
+  -o-transition:      opacity 1s;
+  transition:         opacity 1s;
+  z-index: 100;
+}
+
+.step#start.active {
+    position: static;
+}
 
 .step#start, .step.nested {
   text-align: center;

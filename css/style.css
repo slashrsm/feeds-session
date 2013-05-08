@@ -79,6 +79,8 @@ li {
   opacity: 0;
   border-radius: 0;
   box-shadow:none;
+  z-index: -100;
+  display: none;
 }
 
 #post-end {
@@ -87,12 +89,13 @@ li {
 
 #pre-start.active, #post-end.active {
   opacity: 1;
-  -webkit-transition: opacity 1s;
-  -moz-transition:    opacity 1s;
-  -ms-transition:     opacity 1s;
-  -o-transition:      opacity 1s;
-  transition:         opacity 1s;
+  -webkit-transition: opacity 1s, display 1s;
+  -moz-transition:    opacity 1s, display 1s;
+  -ms-transition:     opacity 1s, display 1s;
+  -o-transition:      opacity 1s, display 1s;
+  transition:         opacity 1s, display 1s;
   z-index: 100;
+  display: block;
 }
 
 .step#start.active {

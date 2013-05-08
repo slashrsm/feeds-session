@@ -144,7 +144,10 @@ li {
 
 body .step:not(#container).demo {
     text-align: center;
-    padding-top: 5em;
+}
+
+body .step:not(#container).demo:not(.active) iframe {
+    display: none;
 }
 
 

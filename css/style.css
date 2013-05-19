@@ -118,7 +118,7 @@ li {
 .step#feeds-concepts:before {
     background: white;
     width: 1000px;
-    height: 2050px;
+    height: 2100px;
     content: '.';
     display: block;
     z-index: -100;
